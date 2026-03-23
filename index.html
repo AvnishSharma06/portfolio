@@ -73,6 +73,8 @@
   .hero-role{font-size:1rem;font-weight:300;letter-spacing:3px;color:var(--muted);text-transform:uppercase;margin-bottom:28px;opacity:0;animation:fadeUp .6s .7s forwards;}
   .hero-desc{font-size:1rem;color:var(--text);line-height:1.7;margin-bottom:36px;opacity:0;animation:fadeUp .6s .9s forwards;}
   .hero-links{display:flex;flex-wrap:wrap;gap:12px;opacity:0;animation:fadeUp .6s 1.1s forwards;}
+  .hero-profile-wrap{margin-bottom:18px;opacity:0;animation:fadeUp .6s .4s forwards;}
+  .hero-profile{width:150px;height:150px;object-fit:cover;border-radius:10px;border:1px solid var(--cyan);box-shadow:var(--glow-c);}
   .btn{font-family:'Share Tech Mono',monospace;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;text-decoration:none;padding:10px 20px;border:1px solid var(--green);color:var(--green);background:transparent;transition:all .2s;cursor:none;position:relative;overflow:hidden;}
   .btn::before{content:'';position:absolute;inset:0;background:var(--green);transform:translateX(-100%);transition:transform .2s;z-index:-1;}
   .btn:hover{color:var(--bg);}.btn:hover::before{transform:translateX(0);}
@@ -95,7 +97,8 @@
   .skill-card:hover::before{transform:scaleX(1);}
   .skill-cat{font-family:'Share Tech Mono',monospace;font-size:.68rem;color:var(--green);letter-spacing:3px;text-transform:uppercase;margin-bottom:14px;}
   .skill-tags{display:flex;flex-wrap:wrap;gap:8px;}
-  .tag{font-family:'Share Tech Mono',monospace;font-size:.72rem;padding:4px 10px;border:1px solid var(--dim);color:var(--text);border-radius:2px;transition:all .2s;}
+  .tag{font-family:'Share Tech Mono',monospace;font-size:.72rem;padding:4px 10px;border:1px solid var(--dim);color:var(--text);border-radius:2px;transition:all .2s;display:inline-flex;align-items:center;gap:6px;}
+  .tag img{width:14px;height:14px;object-fit:contain;flex-shrink:0;}
   .tag:hover{border-color:var(--cyan);color:var(--cyan);background:rgba(0,229,255,.05);}
 
   /* PROJECTS */
@@ -238,6 +241,7 @@
 
   <ul class="nav-center">
     <li><a href="#home" class="active">Home</a></li>
+    <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#projects">Projects</a></li>
@@ -264,6 +268,7 @@
 <!-- Mobile Drawer -->
 <nav class="nav-drawer" id="drawer">
   <a href="#home">Home</a>
+  <a href="#about">About</a>
   <a href="#experience">Experience</a>
   <a href="#education">Education</a>
   <a href="#projects">Projects</a>
@@ -287,7 +292,7 @@
         <div class="terminal-line"><span class="t-out t-hl">Avnish Sharma</span></div>
         <div class="terminal-line" style="margin-top:8px"><span class="t-prompt">$</span> <span class="t-cmd">cat profile.json</span></div>
         <div class="terminal-line"><span class="t-out">{ <span class="t-or">"role"</span>: <span class="t-hl">"Data Science Student"</span>,</span></div>
-        <div class="terminal-line"><span class="t-out">  <span class="t-or">"university"</span>: <span class="t-hl">"LPU, Punjab"</span>,</span></div>
+        <div class="terminal-line"><span class="t-out">  <span class="t-or">"university"</span>: <span class="t-hl">"Lovely Professional University, Punjab"</span>,</span></div>
         <div class="terminal-line"><span class="t-out">  <span class="t-or">"cgpa"</span>: <span class="t-hl">6.97</span>,</span></div>
         <div class="terminal-line"><span class="t-out">  <span class="t-or">"leetcode"</span>: <span class="t-hl">"100+ solved"</span>,</span></div>
         <div class="terminal-line"><span class="t-out">  <span class="t-or">"passion"</span>: <span class="t-hl">"Data Analytics + ML + NLP"</span> }</span></div>
@@ -298,8 +303,11 @@
     </div>
     <div>
       <div class="hero-tag">&lt; Data Science Student &amp; Analyst /&gt;</div>
+      <div class="hero-profile-wrap">
+        <img src="profilepic.jpeg" alt="Avnish Sharma profile photo" class="hero-profile">
+      </div>
       <h1 class="hero-name">Avnish<br><span>Sharma</span></h1>
-      <div class="hero-role">Data Science Student @ LPU · B.Tech</div>
+      <div class="hero-role">Data Science Student @ Lovely Professional University · B.Tech</div>
       <p class="hero-desc">A data science student focused on turning raw data into actionable insights using Python, statistics, and machine learning. I build dashboards, analyze trends, and create practical ML/NLP solutions for real-world problems.</p>
       <div class="hero-links">
         <a href="https://drive.google.com/file/d/1233CfCr0CXhtWDWYQico-iOWDtyppXmC/view?usp=drive_link" target="_blank" class="btn">⬇ Download CV</a>
@@ -309,20 +317,42 @@
   </div>
 </section>
 
+<!-- ABOUT -->
+<section id="about">
+  <div class="sec-hdr reveal"><span class="sec-num">01.</span><h2 class="sec-title">About</h2><div class="sec-line"></div></div>
+  <div class="skill-card reveal" style="padding:30px;">
+    <p class="proj-desc" style="margin-bottom:18px;color:var(--text);font-size:1rem;line-height:1.85;">
+      I am a BTech Computer Science Engineering student with a strong interest in Software Development, Machine Learning, and Data Science. I enjoy building real-world projects and solving complex problems using C++, Python, and modern web technologies.
+    </p>
+    <p class="proj-desc" style="margin-bottom:18px;color:var(--text);font-size:1rem;line-height:1.85;">
+      Currently, I am focusing on improving my skills in Data Structures &amp; Algorithms along with exploring Machine Learning concepts such as data analysis, model building, and predictive systems. I am also working with libraries like NumPy, Pandas, and Matplotlib to gain practical experience in data-driven development.
+    </p>
+    <p class="proj-desc" style="margin-bottom:18px;color:var(--text);font-size:1rem;line-height:1.85;">
+      I am passionate about continuous learning and always looking for opportunities to apply my knowledge to real-world challenges. Along with technical skills, I am also interested in video editing and creative work, which enhances my creativity and problem-solving approach.
+    </p>
+    <p class="proj-desc" style="margin-bottom:18px;color:var(--text);font-size:1rem;line-height:1.85;">
+      My goal is to become a skilled software engineer with expertise in Machine Learning and build impactful solutions that make a difference.
+    </p>
+    <p class="proj-desc" style="margin-bottom:0;color:var(--green);font-size:1rem;line-height:1.85;">
+      I am currently open to internships and opportunities where I can learn, grow, and contribute effectively.
+    </p>
+  </div>
+</section>
+
 <!-- SKILLS -->
 <section id="skills">
-  <div class="sec-hdr reveal"><span class="sec-num">01.</span><h2 class="sec-title">Skills</h2><div class="sec-line"></div></div>
+  <div class="sec-hdr reveal"><span class="sec-num">02.</span><h2 class="sec-title">Skills</h2><div class="sec-line"></div></div>
   <div class="skills-grid">
-    <div class="skill-card reveal"><div class="skill-cat">// Languages</div><div class="skill-tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">C++</span></div></div>
-    <div class="skill-card reveal"><div class="skill-cat">// Data Analysis &amp; Visualization</div><div class="skill-tags"><span class="tag">NumPy</span><span class="tag">Pandas</span><span class="tag">Matplotlib</span><span class="tag">Seaborn</span><span class="tag">Power BI</span><span class="tag">MS Excel</span></div></div>
-    <div class="skill-card reveal"><div class="skill-cat">// Machine Learning</div><div class="skill-tags"><span class="tag">Machine Learning</span><span class="tag">Scikit-learn</span><span class="tag">NLP</span><span class="tag">Feature Engineering</span><span class="tag">Model Evaluation</span></div></div>
-    <div class="skill-card reveal"><div class="skill-cat">// Tools &amp; Platforms</div><div class="skill-tags"><span class="tag">Jupyter Notebook</span><span class="tag">Google Colab</span><span class="tag">MySQL</span><span class="tag">Git</span></div></div>
+    <div class="skill-card reveal"><div class="skill-cat">// Languages</div><div class="skill-tags"><span class="tag"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python icon">Python</span><span class="tag"><img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png" alt="SQL icon">SQL</span><span class="tag"><img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" alt="C++ icon">C++</span></div></div>
+    <div class="skill-card reveal"><div class="skill-cat">// Data Analysis &amp; Visualization</div><div class="skill-tags"><span class="tag"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968358.png" alt="NumPy icon">NumPy</span><span class="tag"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968342.png" alt="Pandas icon">Pandas</span><span class="tag"><img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Matplotlib icon">Matplotlib</span><span class="tag"><img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Seaborn icon">Seaborn</span><span class="tag"><img src="https://cdn-icons-png.flaticon.com/512/888/888879.png" alt="Power BI icon">Power BI</span><span class="tag"><img src="https://cdn-icons-png.flaticon.com/512/732/732220.png" alt="MS Excel icon">MS Excel</span></div></div>
+    <div class="skill-card reveal"><div class="skill-cat">// Machine Learning</div><div class="skill-tags"><span class="tag"><img src="https://cdn-icons-png.flaticon.com/512/2103/2103633.png" alt="Machine Learning icon">Machine Learning</span><span class="tag"><img src="https://cdn-icons-png.flaticon.com/512/4549/4549734.png" alt="Scikit-learn icon">Scikit-learn</span><span class="tag"><img src="https://cdn-icons-png.flaticon.com/512/3898/3898082.png" alt="NLP icon">NLP</span><span class="tag"><img src="https://cdn-icons-png.flaticon.com/512/1048/1048953.png" alt="Feature Engineering icon">Feature Engineering</span><span class="tag"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Model Evaluation icon">Model Evaluation</span></div></div>
+    <div class="skill-card reveal"><div class="skill-cat">// Tools &amp; Platforms</div><div class="skill-tags"><span class="tag"><img src="https://cdn-icons-png.flaticon.com/512/2965/2965300.png" alt="Jupyter Notebook icon">Jupyter Notebook</span><span class="tag"><img src="https://cdn-icons-png.flaticon.com/512/2702/2702602.png" alt="Google Colab icon">Google Colab</span><span class="tag"><img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png" alt="MySQL icon">MySQL</span><span class="tag"><img src="https://cdn-icons-png.flaticon.com/512/4494/4494748.png" alt="Git icon">Git</span></div></div>
   </div>
 </section>
 
 <!-- EXPERIENCE -->
 <section id="experience">
-  <div class="sec-hdr reveal"><span class="sec-num">02.</span><h2 class="sec-title">Experience</h2><div class="sec-line"></div></div>
+  <div class="sec-hdr reveal"><span class="sec-num">03.</span><h2 class="sec-title">Experience</h2><div class="sec-line"></div></div>
   <div class="timeline">
     <div class="tl-item reveal">
       <div class="tl-badge exp-badge">Training</div>
@@ -347,7 +377,7 @@
 
 <!-- EDUCATION -->
 <section id="education">
-  <div class="sec-hdr reveal"><span class="sec-num">03.</span><h2 class="sec-title">Education</h2><div class="sec-line"></div></div>
+  <div class="sec-hdr reveal"><span class="sec-num">04.</span><h2 class="sec-title">Education</h2><div class="sec-line"></div></div>
   <div class="timeline">
     <div class="tl-item reveal">
       <div class="tl-badge edu-badge">B.Tech</div>
@@ -375,7 +405,7 @@
 
 <!-- PROJECTS -->
 <section id="projects">
-  <div class="sec-hdr reveal"><span class="sec-num">04.</span><h2 class="sec-title">Projects</h2><div class="sec-line"></div></div>
+  <div class="sec-hdr reveal"><span class="sec-num">05.</span><h2 class="sec-title">Projects</h2><div class="sec-line"></div></div>
   <div class="projects-grid">
     <div class="project-card reveal">
       <div class="proj-num">01</div>
@@ -403,11 +433,11 @@
 
 <!-- CERTIFICATES -->
 <section id="certificates">
-  <div class="sec-hdr reveal"><span class="sec-num">05.</span><h2 class="sec-title">Certificates</h2><div class="sec-line"></div></div>
+  <div class="sec-hdr reveal"><span class="sec-num">06.</span><h2 class="sec-title">Certificates</h2><div class="sec-line"></div></div>
   <div class="certs-grid">
     <a href="https://www.lpu.in/skilldevelopment" target="_blank" class="cert-card reveal">
       <div class="cert-icon">🏆</div>
-      <div><div class="cert-name">CodeQuest: DSA Summer Bootcamp</div><div class="cert-issuer">LPU · Jul 2025</div></div>
+      <div><div class="cert-name">CodeQuest: DSA Summer Bootcamp</div><div class="cert-issuer">Lovely Professional University · Jul 2025</div></div>
     </a>
     <a href="https://www.coursera.org/account/accomplishments/verify/M6CN81P5IZSQ" target="_blank" class="cert-card reveal">
       <div class="cert-icon">🌐</div>
@@ -426,7 +456,7 @@
 
 <!-- ACHIEVEMENTS -->
 <section id="achievements">
-  <div class="sec-hdr reveal"><span class="sec-num">06.</span><h2 class="sec-title">Achievements</h2><div class="sec-line"></div></div>
+  <div class="sec-hdr reveal"><span class="sec-num">07.</span><h2 class="sec-title">Achievements</h2><div class="sec-line"></div></div>
   <div class="achievement reveal">
     <div class="ach-num">100<span class="ach-plus">+</span></div>
     <div class="ach-text">
@@ -442,7 +472,7 @@
 
 <!-- CONTACT -->
 <section id="contact">
-  <div class="sec-hdr reveal"><span class="sec-num">07.</span><h2 class="sec-title">Contact</h2><div class="sec-line"></div></div>
+  <div class="sec-hdr reveal"><span class="sec-num">08.</span><h2 class="sec-title">Contact</h2><div class="sec-line"></div></div>
 
   <div class="contact-layout">
 
@@ -530,7 +560,7 @@ drawer.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{ham.clas
 
 // Navbar: scroll shadow + active link highlight
 const navbar=document.getElementById('navbar');
-const sections=['home','experience','education','projects','certificates','achievements','contact'];
+const sections=['home','about','experience','education','projects','certificates','achievements','contact'];
 function updateNav(){
   navbar.classList.toggle('scrolled',window.scrollY>30);
   let cur='home';
